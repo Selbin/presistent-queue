@@ -4,23 +4,23 @@ const fs = require('fs')
 const fileName = 'store.txt'
 const taskQueue = []
 
-const fillTaskQueue = (data) => {
+const write = (data) => {
   taskQueue.push(data)
   if (taskQueue.length > 9) {
     while (taskQueue.length !== 0) {
-      writeFromQueue(taskQueue.shift)
+      writeToFile(taskQueue.shift)
     }
   }
 }
 
-const writeFromQueue = taskQueueData => {
+const writeToFile = taskQueueData => {
   fs.appendFileSync(path.join(__dirname, fileName), taskQueueData + '\r\n')
   if (fs.statSync(path.join(__dirname, fileName)).size > 1000) {
     fs.renameSync(path.join(__dirname, fileName), path.join(__dirname, 'bigStore/', `${new Date().getTime()}.txt`))
   }
 }
 
-const readFromFile = () => {
+const read = () => {
   fs.readdir(path.join(__dirname, 'bigStore/'), (err, files) => {
     if (err) throw err
     files.forEach((file) => {
@@ -37,4 +37,4 @@ const readFromFile = () => {
   })
 }
 
-module.exports = { fillTaskQueue, readFromFile }
+module.exports = { write, read }
