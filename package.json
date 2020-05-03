@@ -1,8 +1,8 @@
 {
   "name": "node_presistent_queue",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Simple task queue",
-  "main": "taskmanager.js",
+  "main": "presistentQueue.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
