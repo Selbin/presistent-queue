@@ -1,6 +1,6 @@
 {
   "name": "node_presistent_queue",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Simple task queue",
   "main": "taskmanager.js",
   "scripts": {
