@@ -27,7 +27,7 @@ const read = (dirPath, cb) => {
       files.forEach((file) => {
         const readLine = readStream.createInterface({ input: path.join(dirPath, file) })
         readLine.on('line', (line) => {
-          cb(line)
+          cb(null, line)
         })
         readLine.on('close', () => {
           fs.unlink(path.join(__dirname, 'bigStore/', file))
