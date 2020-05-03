@@ -1,15 +1,16 @@
 {
   "name": "node_presistent_queue",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Simple task queue",
   "main": "presistentQueue.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "author": "selbin",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
+    "mocha": "^7.1.2",
     "socket.io": "^2.3.0",
     "uuid": "^7.0.3"
   },
