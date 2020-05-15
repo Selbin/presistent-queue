@@ -1,8 +1,8 @@
 {
-  "name": "node_persistent_queue",
-  "version": "1.0.8",
+  "name": "node_presistent_queue",
+  "version": "1.0.6",
   "description": "Simple task queue",
-  "main": "persistentQueue.js",
+  "main": "presistentQueue.js",
   "scripts": {
     "test": "mocha"
   },
